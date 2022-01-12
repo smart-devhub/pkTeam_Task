@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.login{
+    width: 60%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+
+    
+
+}
+.login input{
+    outline: none;
+}
+.logo{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: black;
+}
+.links{
+    text-decoration: none;
+    margin-right: 0.7rem;
+    color: rgb(7, 8, 7);
+    font-size: 1.2rem;
+}
+.homedata{
+    width: 90%;
+    margin: 1.5rem auto;
+}
+
