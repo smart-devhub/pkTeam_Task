@@ -1,16 +1,29 @@
-import React,{useState} from 'react'
-import {useParams} from 'react-router-dom'
-import { useEffect } from 'react/cjs/react.production.min';
-import axios from 'axios';
+import React from 'react'
 
 function Details() {
-    const data=localStorage('user')
-    console.log(data);
+    
+    const data=JSON.parse(localStorage.getItem("user"))
+    
+    
 
     return (
         <div>
             
-            details
+            
+                
+                    <div className='userdata'>
+                        <h1 className='text-primary text-center mb-2 p-3'>{data.first_name}{data.last_name} Data</h1>
+                        <ul>
+                            <li>id----:{data.uid}</li>
+                            <li>FirstName---:{data.first_name}</li>
+                            <li>LastName---:{data.last_name}</li>
+                            <li>Email---:{data.email}</li>
+                            <li>Password---:{data.password}</li>
+                            <li>City---:{data.address.city}</li>
+                        </ul>
+                    </div>
+                
+            
         </div>
     )
 }

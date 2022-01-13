@@ -1,14 +1,14 @@
 import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
-
+import {useParams} from 'react-router-dom'
 
 
 function Home() {
     const [users,setuser]=useState([])
     const [flag,setflag]=useState(false)
     
-
+const {id} =useParams()
     useEffect(()=>{
          loadData()
     },[])
@@ -21,9 +21,9 @@ function Home() {
         
     }
    function deleteData(id){
-     const del= users.filter(user=>user.uid !== id)
-      setflag(!flag)
-      loadData()
+     setuser(users.filter(user=>user.uid !== id))
+      // setflag(!flag)
+      // loadData()
    }
 
 
